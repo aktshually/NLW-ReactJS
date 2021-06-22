@@ -1,21 +1,19 @@
-import React from "react"
-
 /*type ButtonProps = {
     children ?: string // text ?: string significa que aquilo é opcional, não precisa colocar necessariamente
 }
 */
 
-const Button = () => {
+import {ButtonHTMLAttributes} from "react";
 
-    const [getCount, setCount] = React.useState(0)
+import "../styles/button.scss"
 
-    function increment() {
-        setCount(getCount + 1)
-    }
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
 
+const Button = (props: ButtonProps) => {
+    
+    
     return (
-        <button onClick={increment}>
-            {getCount}
+        <button className="button" {...props}>
         </button>
     )
 }
