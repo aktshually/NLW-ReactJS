@@ -55,20 +55,20 @@ const AuthContextProvider = (props: AuthContextProviderProps) => {
     const provider = new firebase.auth.GoogleAuthProvider();
 
     const result = await auth.signInWithPopup(provider)
-      if (result.user) {
-        const { displayName, photoURL, uid } = result.user
+    if (result.user) {
+      const { displayName, photoURL, uid } = result.user
 
-        if (!displayName || !photoURL) {
-          throw new Error("Missing information from Google account")
-        }
-
-        setUser({
-          id: uid,
-          name: displayName,
-          avatar: photoURL
-        })
-
+      if (!displayName || !photoURL) {
+        throw new Error("Missing information from Google account")
       }
+
+      setUser({
+        id: uid,
+        name: displayName,
+        avatar: photoURL
+      })
+
+    }
   }
 
 

@@ -102,3 +102,18 @@ function App() {
  *Boas práticas*
  - **Parar** o *event listener* no fim do método em que este é declarado
 - **Fazer um componente** pra cada contexto da nossa aplicação
+
+## Terceira aula
+
+### Eventos
+
+| Evento  | Função  |
+|---|---|
+| onSubmit  | Cada vez que um formulário é enviado  |
+|  onChange | Cada vez que o valor de um input muda  |
+
+### Switch
+É um componente nativo do React que nunca vai deixar duas rotas serem chamadas ao mesmo tempo. No projeto construído na NLW, ele é usado para não confundir a aplicação entre as rotas `/rooms/new` e `/rooms/:id`
+
+### useParams()
+É um hook geralmente armazenado numa variável, a qual se refere aos parâmetros da URL da página. Na aplicação, é utilizado para identificar o ID.
