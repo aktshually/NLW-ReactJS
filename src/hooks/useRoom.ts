@@ -11,7 +11,7 @@ type QuestionType = {
 
     content: string,
     isAnswered: boolean,
-    isHightLitghted: boolean,
+    isHighLitghted: boolean,
     likeCount: number,
     likeID: string | undefined
 }
@@ -51,7 +51,7 @@ export function useRoom(RoomID: string) {
                     id: key,
                     content: value.content,
                     author: value.author,
-                    isHightLitghted: value.isHightLitghted,
+                    isHighLitghted: value.isHightLitghted,
                     isAnswered: value.isAnswered,
                     likeCount: Object.values(value.likes ?? {}).length,
                     likeID: Object.entries(value.likes ?? {}).find(([key, like]) => like.authorId === user?.id)?.[0]

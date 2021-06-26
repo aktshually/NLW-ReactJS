@@ -2,6 +2,8 @@ import { ReactNode } from "react"
 
 import "../styles/question.scss"
 
+import classnames from "classnames"
+
 
 type QuestionProps = {
     content: string,
@@ -9,13 +11,22 @@ type QuestionProps = {
         name: string,
         avatar: string
     },
-    children?: ReactNode
+    children?: ReactNode,
+    isAnswered?: boolean,
+    isHighLitghted?: boolean
 }
 
-const Question = ({ content, author, children }: QuestionProps) => {
+const Question = ({ content, author, children, isAnswered = false, isHighLitghted = false}: QuestionProps) => {
 
     return (
-        <div className="question">
+        <div 
+            className={classnames("question", {
+                answered: isAnswered
+            },
+            {
+                highLighted: isHighLitghted && !isAnswered
+            })}
+        >
             <p>
                 {content}
             </p>

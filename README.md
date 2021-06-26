@@ -120,3 +120,63 @@ function App() {
 
 
 ## Quarta aula
+
+~~Nenhum conteúdo adicional ao ReactJS essencialmente~~
+
+## Quinta aula
+
+### Classnames
+Uma dependência que permite nós passarmos classes dependentes de uma condição de forma mais simples. Pode ser usado como no exemplo a seguir.
+```ts
+
+import classnames from "classnames"
+
+const Component = () => {
+
+    sorted_number = Math.floor(Math.random() * 10)
+
+    return (
+        <div>
+            <p
+                className={classnames("MandatoryClass", {
+                    RandomClass: sorted_number > 5
+                })}
+            >
+
+            </p>
+        </div>
+    )
+
+    // RandomClass (key) will be only applied if sorted_number > 5 equals to true
+    
+}
+
+export default Component;
+
+```
+
+
+### Fragment
+
+Quando precisamos envelopar um conteúdo TSX ou JSX sem ter que necessariamente mudar o CSS da página, podemos usar **fragments** que não são exibidas no HTLM e, portanto, não afetam o CSS. Pode-se usar fragments desta maneira:
+```ts
+
+const Component = () => {
+
+    return (
+        <>
+            <p>
+                Este conteúdo está dentro de um fragment
+            </p>
+            <p>
+                Agora, se for checar o dev tools, a div não aparece!
+            </p>
+        </>
+    )
+
+}
+
+export default Component;
+
+```
+
