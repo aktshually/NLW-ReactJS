@@ -9,12 +9,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
 
-        > img {
-            max-height: 45px;
-        }
+            img {
+                max-height: 45px;
+            }
+    
+            div {
+                display: flex;
+                gap: 20px;
 
+                button {
+                    height: 40px;
+                }
+            }
+        }
     }
 
     main {
@@ -99,6 +107,10 @@
                 }
             }
 
+        }
+
+        .QuestionList {
+            margin-top:32px;
         }
 
     }

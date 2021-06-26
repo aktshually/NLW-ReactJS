@@ -1,0 +1,70 @@
+.question {
+    background: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+
+    p {
+        color: #29292e;
+    }
+
+    & + .question {
+        margin-top: 8px
+    // & = se refere ao próprio elemento (.question)
+    // a lógica disso é: se tiver uma question seguida de outra question, a segunda tem essa prop
+    // ou seja, toda question tirando a primeira terá margin-top: 8px
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 24px;
+
+        .UserInfo {
+            display: flex;
+            align-items: center;
+            
+            img {
+                width: 32px;
+                height: 32px;
+
+                border-radius: 50%;
+            }
+
+            span {
+                margin-left: 8px;
+                color: #737380;
+                font-size: 14px;
+            }
+        }
+        
+        button {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            transition: filter 0.2;
+
+            &.LikeButton {
+                display: flex;
+                align-items: flex-end;
+                color: #737380;
+                gap: 8px;
+
+
+                &.liked {
+                    color: #835afd;
+
+                    svg path {
+                        stroke: #835afd;
+                    }
+                }
+            }
+
+            &:hover {
+                filter: brightness(0.7)
+            }
+        }
+
+    }
+
+}

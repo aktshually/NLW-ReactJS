@@ -15,7 +15,13 @@
 
     transition: 0.2s;
 
-    &:not(:disabled)hover {
+    &.outlined {
+        background-color: #fff;
+        border: 1px solid #835afd;
+        color: #835afd;
+    }
+
+    &:not(:disabled):hover {
         filter: brightness(0.9)
     }
 

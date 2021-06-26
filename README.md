@@ -117,3 +117,6 @@ function App() {
 
 ### useParams()
 É um hook geralmente armazenado numa variável, a qual se refere aos parâmetros da URL da página. Na aplicação, é utilizado para identificar o ID.
+
+
+## Quarta aula
